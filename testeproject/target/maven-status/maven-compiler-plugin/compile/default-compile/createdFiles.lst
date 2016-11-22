@@ -1,0 +1,6 @@
+com\mycompany\testeproject\App.class
+com\mycompany\testeproject\Person.class
+com\mycompany\testeproject\PersonsController.class
+com\mycompany\testeproject\persistence\entity\A.class
+com\mycompany\testeproject\Dao.class
+com\mycompany\testeproject\persistence\entity\A_.class
