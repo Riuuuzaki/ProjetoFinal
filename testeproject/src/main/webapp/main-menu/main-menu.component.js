@@ -4,7 +4,7 @@ angular.
   component('mainMenu', {
     templateUrl: 'main-menu/main-menu.template.html',
   controller: ['Menu',
-          function MenuListController(Menu) {
+          function MenuListController() {
             }
   ]
 });
