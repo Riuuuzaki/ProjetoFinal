@@ -1,13 +1,10 @@
 ul {
     list-style-type: none;
-    margin: 0;
+    margin: 5;
     padding: 0;
     overflow: hidden;
     background-color: #cc0025;
     height: 60px;
-    margin-top: -10px;
-    margin-right: -10px;
-    margin-left: -10px;
 }
 
 li {
@@ -35,7 +32,6 @@ a.logout {
 }
 
 label.cgi {
-    font: bold;
     font-size: 40px;
     margin-left: 20px;
     color: white;

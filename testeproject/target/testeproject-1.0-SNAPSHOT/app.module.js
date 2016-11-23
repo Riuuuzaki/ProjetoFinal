@@ -1,1 +1,1 @@
-angular.module('paginaColab', ['ngResource', 'mainMenu']);
+angular.module('paginaColab', ['ngResource', 'mainMenu', 'formDadosPessoais']);
