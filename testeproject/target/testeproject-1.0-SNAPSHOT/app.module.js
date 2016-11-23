@@ -1,1 +1,1 @@
-angular.module('paginaColab', ['ngResource']);
+angular.module('paginaColab', ['ngResource', 'mainMenu']);

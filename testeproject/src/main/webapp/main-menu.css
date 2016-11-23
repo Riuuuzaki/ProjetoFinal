@@ -4,10 +4,10 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #cc0025;
-    margin-top: -20px;
-    margin-right: -20px;
-    margin-left: -20px;
     height: 60px;
+    margin-top: -10px;
+    margin-right: -10px;
+    margin-left: -10px;
 }
 
 li {
@@ -27,7 +27,6 @@ li a {
 li a:hover {
     background-color: white;
     color: #cc0025;
-    font-style: bold;
 }
 
 a.logout {
