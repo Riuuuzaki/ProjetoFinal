@@ -2,7 +2,7 @@
 angular.
   module('mainMenu', []).
   component('mainMenu', {
-    templateUrl: 'main-menu/main-menu.template.html',
+    templateUrl: 'templates/main-menu.template.html',
   controller: ['Menu',
           function MenuListController() {
             }
