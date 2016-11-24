@@ -1,11 +1,12 @@
 angular.module('paginaColab')
     .component('dadosColab', {
         templateUrl:'app.template.html',
-        controller: [ 'Person',
-            function dadosColabController(Person){
+        controller: [ 'Colaborador',
+            function dadosColabController(Colaborador){
                 var self = this;
                 
-                self.dados = Person.query();
+                self.dados = Colaborador.query();
+                
             }
         ]}
     );

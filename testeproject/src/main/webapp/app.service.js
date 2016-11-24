@@ -1,8 +1,8 @@
 angular.module('paginaColab')
-        .factory('Person', ['$resource',
+        .factory('Colaborador', ['$resource',
             function ($resource) {
                 return $resource(
-                        "rest/person/get",
+                        "rest/colaborador/getColaborador",
                         {},
                         {
                             query: {
