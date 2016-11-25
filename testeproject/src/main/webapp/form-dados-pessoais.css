@@ -104,9 +104,21 @@
     background: #d2d9dd;
 }
 
-   div #teste.form-style-5{
-    
+
+.form-control:focus {  
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
-
-
-
+.btn-login {
+  color: #fff;
+  background-color: #ef3232;
+  border-color: #d43f3a;
+}
+.btn-login:focus,
+.btn-login.focus,
+.btn-login:hover{
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #d32f2a;
+}
