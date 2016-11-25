@@ -13,6 +13,7 @@ import java.util.Date;
  * @author monisp
  */
 public class Colaborador {
+
     Long nrColaborador;
     String nome;
     Date dataNasc;
@@ -29,7 +30,7 @@ public class Colaborador {
 
     public Colaborador() {
     }
-    
+
     public Colaborador(Long nrColaborador, String nome, Date dataNasc, String nacionalidade, String numDoc, Date dataEmissaoDoc, Date dataFimDoc, Character estadoCivil, int nif, String nrSegSocial, String habLiteraria, Character cartaCond, String repartFinancas) {
         this.nrColaborador = nrColaborador;
         this.nome = nome;
@@ -149,20 +150,60 @@ public class Colaborador {
     public void setNrSegSocial(String nrSegSocial) {
         this.nrSegSocial = nrSegSocial;
     }
-    
-    public void buildFrom(Tcolaborador tcolaborador){
-        this.setCartaCond(tcolaborador.getCartaCond());
-        this.setDataEmissaoDoc(tcolaborador.getDataEmissaoDoc());
-        this.setDataFimDoc(tcolaborador.getDataFimDoc());
-        this.setDataNasc(tcolaborador.getDataNasc());
-        this.setEstadoCivil(tcolaborador.getEstadoCivil());
-        this.setHabLiteraria(tcolaborador.getHabLiteraria());
-        this.setNacionalidade(tcolaborador.getNacionalidade());
-        this.setNif(tcolaborador.getNif());
-        this.setNome(tcolaborador.getNome());
-        this.setNrColaborador(tcolaborador.getNrColaborador());
-        this.setNumDoc(tcolaborador.getNumDoc());
-        this.setRepartFinancas(tcolaborador.getRepartFinancas());
-        this.setNrSegSocial(tcolaborador.getNrSegSocial());
+
+    public static Colaborador buildFrom(Tcolaborador tcolaborador) {
+        Colaborador colab = new Colaborador();
+        colab.setCartaCond(tcolaborador.getCartaCond());
+        colab.setDataEmissaoDoc(tcolaborador.getDataEmissaoDoc());
+        colab.setDataFimDoc(tcolaborador.getDataFimDoc());
+        colab.setDataNasc(tcolaborador.getDataNasc());
+        colab.setEstadoCivil(tcolaborador.getEstadoCivil());
+        colab.setHabLiteraria(tcolaborador.getHabLiteraria());
+        colab.setNacionalidade(tcolaborador.getNacionalidade());
+        colab.setNif(tcolaborador.getNif());
+        colab.setNome(tcolaborador.getNome());
+        colab.setNrColaborador(tcolaborador.getNrColaborador());
+        colab.setNumDoc(tcolaborador.getNumDoc());
+        colab.setRepartFinancas(tcolaborador.getRepartFinancas());
+        colab.setNrSegSocial(tcolaborador.getNrSegSocial());
+        return colab;
+    }
+
+    public static Tcolaborador buildToTcolaborador(Colaborador colaborador) {
+        Tcolaborador tcolaborador = new Tcolaborador();
+        tcolaborador.setCartaCond(colaborador.getCartaCond());
+        tcolaborador.setDataEmissaoDoc(colaborador.getDataEmissaoDoc());
+        tcolaborador.setDataFimDoc(colaborador.getDataFimDoc());
+        tcolaborador.setDataNasc(colaborador.getDataNasc());
+        tcolaborador.setEstadoCivil(colaborador.getEstadoCivil());
+        tcolaborador.setHabLiteraria(colaborador.getHabLiteraria());
+        tcolaborador.setNacionalidade(colaborador.getNacionalidade());
+        tcolaborador.setNif(colaborador.getNif());
+        tcolaborador.setNome(colaborador.getNome());
+        tcolaborador.setNrColaborador(colaborador.getNrColaborador());
+        tcolaborador.setNumDoc(colaborador.getNumDoc());
+        tcolaborador.setRepartFinancas(colaborador.getRepartFinancas());
+        tcolaborador.setNrSegSocial(colaborador.getNrSegSocial());
+        return tcolaborador;
+    }
+
+    public static Tcolaborador updateToTcolaborador(Tcolaborador tcolaborador, Colaborador colaborador) {
+        if (tcolaborador == null) {
+
+            tcolaborador = new Tcolaborador();
+        }
+        tcolaborador.setCartaCond(colaborador.getCartaCond());
+        tcolaborador.setDataEmissaoDoc(colaborador.getDataEmissaoDoc());
+        tcolaborador.setDataFimDoc(colaborador.getDataFimDoc());
+        tcolaborador.setDataNasc(colaborador.getDataNasc());
+        tcolaborador.setEstadoCivil(colaborador.getEstadoCivil());
+        tcolaborador.setHabLiteraria(colaborador.getHabLiteraria());
+        tcolaborador.setNacionalidade(colaborador.getNacionalidade());
+        tcolaborador.setNif(colaborador.getNif());
+        tcolaborador.setNome(colaborador.getNome());
+        tcolaborador.setNumDoc(colaborador.getNumDoc());
+        tcolaborador.setRepartFinancas(colaborador.getRepartFinancas());
+        tcolaborador.setNrSegSocial(colaborador.getNrSegSocial());
+        return tcolaborador;
     }
 }

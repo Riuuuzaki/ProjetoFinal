@@ -1,6 +1,8 @@
 com\mycompany\testeproject\App.class
+com\mycompany\testeproject\serialization\GsonDateSerialization.class
 com\mycompany\testeproject\ColaboradorController.class
 com\mycompany\testeproject\persistence\entity\Tcolaborador_.class
+com\mycompany\testeproject\serialization\DateToStringConverter.class
 com\mycompany\testeproject\persistence\entity\Tcolaborador.class
 com\mycompany\testeproject\ColaboradorDAO.class
 com\mycompany\testeproject\model\Colaborador.class

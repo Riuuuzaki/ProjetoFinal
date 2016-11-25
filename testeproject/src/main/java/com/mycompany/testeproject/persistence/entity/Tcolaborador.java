@@ -7,12 +7,17 @@ package com.mycompany.testeproject.persistence.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -42,7 +47,10 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Tcolaborador.findByNif", query = "SELECT t FROM Tcolaborador t WHERE t.nif = :nif"),
     @NamedQuery(name = "Tcolaborador.findByRepartFinancas", query = "SELECT t FROM Tcolaborador t WHERE t.repartFinancas = :repartFinancas"),
     @NamedQuery(name = "Tcolaborador.findByNrSegSocial", query = "SELECT t FROM Tcolaborador t WHERE t.nrSegSocial = :nrSegSocial")})
+
 public class Tcolaborador implements Serializable {
+
+    private final static Logger log = LoggerFactory.getLogger(Tcolaborador.class);
 
     private static final long serialVersionUID = 1L;
     @Basic(optional = false)
@@ -85,9 +93,9 @@ public class Tcolaborador implements Serializable {
     @Column(name = "CARTA_COND")
     private Character cartaCond;
     @Id
-    @Basic(optional = false)
-    @NotNull
     @Column(name = "NR_COLABORADOR")
+    @GeneratedValue(generator = "S_NR_COLABORADOR", strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(name = "S_NR_COLABORADOR", sequenceName = "S_NR_COLABORADOR", allocationSize = 1)
     private Long nrColaborador;
     @Basic(optional = false)
     @NotNull
@@ -250,5 +258,5 @@ public class Tcolaborador implements Serializable {
     public String toString() {
         return "com.mycompany.testeproject.persistence.entity.Tcolaborador[ nrColaborador=" + nrColaborador + " ]";
     }
-    
+
 }

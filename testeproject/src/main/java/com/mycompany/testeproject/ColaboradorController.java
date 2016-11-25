@@ -5,10 +5,15 @@
  */
 package com.mycompany.testeproject;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import com.mycompany.testeproject.model.Colaborador;
+import com.mycompany.testeproject.persistence.entity.Tcolaborador;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -20,19 +25,27 @@ import org.springframework.web.bind.annotation.RestController;
 public class ColaboradorController {
 
     private ColaboradorDAO dao;
-
+    private final static Logger log = LoggerFactory.getLogger(ColaboradorController.class);
+    
     @Autowired
     public ColaboradorController(ColaboradorDAO dao) {
         this.dao = dao;
     }
 
-    @RequestMapping("/getColaborador")
+    @RequestMapping(path="/getColaborador", method= RequestMethod.GET)
     public Colaborador getColaborador(Long nrColaborador, Model model) {
-        Colaborador colaborador = new Colaborador();
-        colaborador.buildFrom(dao.getColaboradorByNrColaborador(Long.parseLong("5")));
+        Colaborador colaborador = Colaborador.buildFrom(dao.getColaboradorByNrColaborador(nrColaborador));
         //Tcolaborador x = dao.getColaboradorByNrColaborador(nrColaborador);
         System.out.println(colaborador.getNome());
         model.addAttribute("get", colaborador);
         return colaborador;
     }
+    
+    @RequestMapping(path="/saveColaborador", method= RequestMethod.POST)
+    public Tcolaborador saveColaborador(@RequestBody Colaborador colab) {
+        log.info("ColaboradorController - A criar Colaborador " + colab.getNome());
+        Tcolaborador saveColaborador = dao.saveColaborador(colab);
+        
+        return saveColaborador;
+    }    
 }

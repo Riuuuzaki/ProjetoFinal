@@ -5,7 +5,8 @@ angular.module('paginaColab')
             function dadosColabController(Colaborador){
                 var self = this;
                 
-                self.dados = Colaborador.query();
+                self.dados = Colaborador.get();
+                self.as = "as";
                 
             }
         ]}

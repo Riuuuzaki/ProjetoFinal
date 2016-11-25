@@ -2,12 +2,20 @@ angular.module('paginaColab')
         .factory('Colaborador', ['$resource',
             function ($resource) {
                 return $resource(
-                        "rest/colaborador/getColaborador",
+                        {},
                         {},
                         {
-                            query: {
+                            get: {
                                 method: 'GET',
-                                isArray: false
+                                isArray: false,
+                                url: 'rest/colaborador/getColaborador'
+                            },
+                            
+                            post: {
+                                method: 'POST',
+                                isArray: false,
+                                url: 'rest/colaborador/saveColaborador',
+                                headers: [{'Content-Type': 'application/json'}]   
                             }
                         }
                 );
