@@ -25,7 +25,7 @@
     -webkit-appearance: menulist-button;
     height:35px;
 }
-.form-style-5 .number {
+.number {
     background: #cc0025;
     color: #fff;
     height: 30px;
@@ -40,7 +40,8 @@
 }
 
 .form-style-5 input[type="submit"],
-.form-style-5 input[type="button"]
+.form-style-5 input[type="button"],
+.form-style-5 input[type="reset"]
 {
     position: relative;
     display: block;
@@ -71,6 +72,16 @@
 .form-style-5 label {
     font-size: 1em;
     color: black;
+}
+
+.form-style-5 textArea {
+    max-width: 600px;
+    background: #e8eeef;
+}
+
+
+.form-style-5 file {
+    max-width: 1200px;
 }
 
 .form-style-5 input, 
@@ -104,9 +115,34 @@
     background: #d2d9dd;
 }
 
-   div #teste.form-style-5{
-    
+
+.form-control:focus {  
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 
+.ausencias {
+    display: inline-block;
+    float: left;
+}
 
+.ausenciasTable {
+    display: inline-block;
+    float: left;
+}
+
+.btn-login {
+  color: #fff;
+  background-color: #ef3232;
+  border-color: #d43f3a;
+}
+
+.btn-login:focus,
+.btn-login.focus,
+.btn-login:hover{
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #d32f2a;
+}

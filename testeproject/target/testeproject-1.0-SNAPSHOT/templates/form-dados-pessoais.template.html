@@ -1,59 +1,54 @@
 <div class="form-style-5">
-<form>
-<fieldset>
-<legend><span class="number">1</span> Dados Pessoais {{$ctrl.dados.nome}}</legend>
-<div class="form-style-5" id="teste">
-<label>Nº Colaborador &nbsp;
-</label><input ng-pattern="/^\d+$/" ng-model="numColab" type="text" readonly>
-</div>
-<input ng-model="nome" ng-value={{$ctrl.dados.nome}} type="text" placeholder="Nome">
-<select id="job">
-<optgroup label="Habilitações">
-  <option value="Solteiro">12º</option>
-  <option value="Casado">Ensino Superior</option>
-</optgroup>
-</select>
-<label>Data Nascimento &nbsp;</label>
-<input ng-model="dataNasc" type="date" name="dNascimento">
-<select name="nacionalidade">
-<optgroup label="Nacionalidade">
-  <option value="Portugal">Portugal</option>
-  <option value="Cabo Verde">Cabo Verde</option>
-  <option value="Japão">Japão</option>
-</optgroup>
-</select>
-<label>Carta Condução &nbsp;</label>
-<select name="cartaConducao">
-  <option value="sim">Sim</option>
-  <option value="nao">Não</option>
-</select>
-</fieldset>
-<fieldset>
-<legend><span class="number">2</span> Segurança Social</legend>
-<label>Numero BI &nbsp;</label>
-<input ng-pattern="/^\d+$/" type="text" ng-model="bi" placeholder="Nº BI">
-<input type="date" name="emissao" >
-<input type="date" name="validade">
-<label>NIF &nbsp;</label>
-<input ng-pattern="/^\d+$/" type="text" ng-model="nif" placeholder="NIF">
-<select id="job" name="estadoCivil">
-<optgroup label="Estado Civil">
-  <option value="Solteiro">Solteiro</option>
-  <option value="Casado">Casado</option>
-</optgroup>
-</select>
-<p>
-    <div class="form-style-5">
-        <label for="name">Name</label>
-        <input id="name" type="text" value="" name="name">
-    </div>
-<input type="submit" value="Cancelar" />
-<input type="submit" value="Guardar" />
-</fieldset>
-</form>
-</div>
-
-
-<div>
-    {{$ctrl.posta}}
+    <form>
+        <fieldset>
+            <legend><span class="number">1</span> Dados Pessoais {{$ctrl.dados.nome}}</legend>
+            <div class="form-style-5" id="teste">
+                <label>Nº Colaborador &nbsp;
+                </label><input ng-pattern="/^\d+$/" ng-model="numColab" type="text" readonly>
+            </div>
+            <input ng-model="nome" ng-value={{$ctrl.dados.nome}} type="text" placeholder="Nome">
+            <select id="job">
+                <optgroup label="Habilitações">
+                    <option value="Solteiro">12º</option>
+                    <option value="Casado">Ensino Superior</option>
+                </optgroup>
+            </select>
+            <label>Data Nascimento &nbsp;</label>
+            <input ng-model="dataNasc" type="date" name="dNascimento">
+            <select name="nacionalidade">
+                <optgroup label="Nacionalidade">
+                    <option value="Portugal">Portugal</option>
+                    <option value="Cabo Verde">Cabo Verde</option>
+                    <option value="Japão">Japão</option>
+                </optgroup>
+            </select>
+            <label>Carta Condução &nbsp;</label>
+            <select name="cartaConducao">
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend><span class="number">2</span> Segurança Social</legend>
+            <label>Numero BI &nbsp;</label>
+            <input ng-pattern="/^\d+$/" type="text" ng-model="bi" placeholder="Nº BI">
+            <input type="date" name="emissao" >
+            <input type="date" name="validade">
+            <label>NIF &nbsp;</label>
+            <input ng-pattern="/^\d+$/" type="text" ng-model="nif" placeholder="NIF">
+            <select id="job" name="estadoCivil">
+                <optgroup label="Estado Civil">
+                    <option value="Solteiro">Solteiro</option>
+                    <option value="Casado">Casado</option>
+                </optgroup>
+            </select>
+            <p>
+            <div class="form-style-5">
+                <label for="name">Name</label>
+                <input id="name" type="text" value="" name="name">
+            </div>
+            <input type="submit" value="Cancelar" />
+            <input type="submit" value="Guardar" />
+        </fieldset>
+    </form>
 </div>

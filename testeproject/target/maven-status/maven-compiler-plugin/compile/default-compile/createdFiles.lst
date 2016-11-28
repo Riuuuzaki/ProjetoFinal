@@ -1,3 +1,4 @@
+com\mycompany\serializers\GsonDateSerialization.class
 com\mycompany\testeproject\App.class
 com\mycompany\testeproject\serialization\GsonDateSerialization.class
 com\mycompany\testeproject\ColaboradorController.class

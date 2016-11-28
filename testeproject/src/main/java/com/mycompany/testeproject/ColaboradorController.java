@@ -34,7 +34,7 @@ public class ColaboradorController {
 
     @RequestMapping(path="/getColaborador", method= RequestMethod.GET)
     public Colaborador getColaborador(Long nrColaborador, Model model) {
-        Colaborador colaborador = Colaborador.buildFrom(dao.getColaboradorByNrColaborador(nrColaborador));
+        Colaborador colaborador = Colaborador.buildFrom(dao.getColaboradorByNrColaborador(59));
         //Tcolaborador x = dao.getColaboradorByNrColaborador(nrColaborador);
         System.out.println(colaborador.getNome());
         model.addAttribute("get", colaborador);
