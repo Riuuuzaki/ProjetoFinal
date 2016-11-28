@@ -9,6 +9,9 @@ angular.
         when('/dadosPessoais', {
           template: '<form-dados-pessoais></form-dados-pessoais>'
         }).
+        when('/ausencias', {
+          template: '<ausencias></ausencias>'
+        }).
         when('/login', {
           template: '<login></login>'
         }).
