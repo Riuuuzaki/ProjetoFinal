@@ -1,0 +1,56 @@
+ul {
+    list-style-type: none;
+    margin: 5;
+    padding: 0;
+    overflow: hidden;
+    background-color: #cc0025;
+    height: 60px;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: white;
+    color: #cc0025;
+}
+
+a.logout {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+label.cgi {
+    font-size: 40px;
+    margin-left: 20px;
+    color: white;
+}
+
+label.exp {
+    font-size: 12px;
+    margin-left: 5px;
+    color: whitesmoke;
+}
+
+img {
+    margin-right: -20px;
+    width: 60%;
+    height: 50%;
+    float: right;
+}
+
+div{
+    background: black;
+    background-size: cover;
+}
