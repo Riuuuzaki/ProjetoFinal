@@ -1,11 +1,13 @@
 package com.mycompany.testeproject.persistence.entity;
 
+import com.mycompany.testeproject.persistence.entity.Tausencia;
 import java.util.Date;
 import javax.annotation.Generated;
+import javax.persistence.metamodel.CollectionAttribute;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2016-11-28T11:53:38")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2016-11-29T10:32:14")
 @StaticMetamodel(Tcolaborador.class)
 public class Tcolaborador_ { 
 
@@ -20,6 +22,7 @@ public class Tcolaborador_ {
     public static volatile SingularAttribute<Tcolaborador, Date> dataNasc;
     public static volatile SingularAttribute<Tcolaborador, String> habLiteraria;
     public static volatile SingularAttribute<Tcolaborador, Character> cartaCond;
+    public static volatile CollectionAttribute<Tcolaborador, Tausencia> tausenciaCollection;
     public static volatile SingularAttribute<Tcolaborador, String> nacionalidade;
     public static volatile SingularAttribute<Tcolaborador, Date> dataEmissaoDoc;
 
